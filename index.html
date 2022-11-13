@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Travel!</title>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@500&display=swap"
+    rel="stylesheet">
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    crossorigin="anonymous">
+
+  <!-- C3 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.18/c3.css">
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/all.css">
+</head>
+
+<body>
+  <section class="add">
+    <div class="container">
+      <div class="col-10 col-pad-12 flex margin-center flex-mob-column">
+        <div class="left col-6 col-pad-5 col-mob-10">
+          <img src="./imgs/undraw_Traveling_re_weve.webp" alt="網站首圖-搜尋、遊玩的夥伴圖" class="display-mob-none">
+          <img src="./imgs/Let’s-Travel.webp" alt="Let's Travel!">
+        </div>
+        <form class="from col-6 col-pad-7 col-mob-12" id="addForm">
+          <h2 class="from-title mb-5">
+            <i class="fas fa-plus-circle"></i>
+            <p>新增旅遊套票</p>
+          </h2>
+          <div class="from-addGroup">
+            <div class="addItem mb-2">
+              <label for="name">套票名稱</label>
+              <input type="text" id="name" placeholder="請填寫套票名稱">
+            </div>
+            <div class="addItem mb-2">
+              <label for="picUrl">圖片網址</label>
+              <input type="text" id="picUrl" placeholder="請填寫圖片網址">
+            </div>
+            <div class="addItem mb-2">
+              <label for="area">景點地區</label>
+              <select name="areaSelect" id="area">
+                <option value="" disabled selected>請選擇景點地區</option>
+                <option value="台北">台北</option>
+                <option value="台中">台中</option>
+                <option value="高雄">高雄</option>
+              </select>
+            </div>
+            <div class="addItem mb-2">
+              <label for="price">套票金額</label>
+              <input type="number" id="price" placeholder="請填寫套票金額" min="0">
+            </div>
+            <div class="addItem mb-2">
+              <label for="number">套票組數</label>
+              <input type="number" id="number" placeholder="請填寫套票組數" min="0">
+            </div>
+            <div class="addItem mb-2">
+              <label for="star">套票星級</label>
+              <input type="number" id="star" placeholder="請填寫套票星級" min="1" max="10">
+            </div>
+            <div class="addItem mb-2">
+              <label for="descip">套票描述</label>
+              <textarea id="descip" rows="5" placeholder="請填寫套票描述（限 100 字）"></textarea>
+            </div>
+            <div class="full-container text-right">
+              <input type="button" class="addbtn" value="新增套票">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="list">
+    <div class="container">
+      <div class="flex col-12 margin-center mb-2">
+        <div class="filterBar col-9 col-pad-12 mb-5">
+          <select id="select">
+            <option value="" disabled selected>地區搜尋</option>
+            <option value="全部">全部</option>
+            <option value="台北">台北</option>
+            <option value="台中">台中</option>
+            <option value="高雄">高雄</option>
+          </select>
+          <p id="filterResult">本次搜尋共 筆資料</p>
+        </div>
+        <div class="col-3">
+          <div id="chart"></div>
+        </div>
+      </div>
+      <div id="resultBlock" class="resultBlock container flex flex-wrap">
+      </div>
+    </div>
+  </section>
+  </div>
+
+
+  <!-- axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+  <!-- C3, D3 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.18/c3.js"></script>
+  <!-- main -->
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

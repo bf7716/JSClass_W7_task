@@ -1,0 +1,59 @@
+.from-title{
+  display: flex;
+  align-items: center;
+  padding-bottom: 4px;
+  font-size: $font-h2;
+  font-weight: 700;
+  color: $primary;
+  border-bottom: 3px solid $primary;
+
+  i{
+    padding-right: 6px;
+  }
+}
+
+.addItem{
+  display: flex;
+  label{
+    width: 25%;
+    font-weight: 500;
+    color: $primary;
+  }
+  input, select, textarea{
+    width: 75%;
+    padding: 8px 0px 8px 12px;
+    background-color: $gray_50;
+    color: $gray;
+    font-size: $font-r;
+    border: 0;
+    border-bottom: 1px solid $primary;
+    transition: all ease .5s;
+
+    &::placeholder{
+      color: $gray;
+    }
+
+    &:focus-visible{
+      outline: none;
+      background-color: $gray_200;
+    }
+  }
+
+  select{
+    padding: 8px 0px 8px 10px;
+  }
+}
+
+.addbtn{
+  padding: 10px 40px;
+  font-size: $font-h3;
+  font-weight: 400;
+  color: #fff;
+  background-color: $primary;
+  border: none;
+  border-radius: 4px;
+  transition: all ease .5s;
+  &:hover{
+    background-color: $primary_900;
+  }
+}

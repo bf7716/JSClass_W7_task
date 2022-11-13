@@ -1,0 +1,8 @@
+.list{
+  padding-top: 56px;
+  padding-bottom: 120px;
+  background-color: $gray_100;
+  @include mobile(){
+    padding-bottom: 32px;
+  }
+}

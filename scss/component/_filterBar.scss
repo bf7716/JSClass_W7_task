@@ -1,0 +1,32 @@
+.filterBar{
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  @include mobile{
+    flex-direction: column;
+  }
+
+  select{
+    width: 30%;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid $gray_300;
+    font-size: $font-r;
+    color: $gray;
+    @include mobile(){
+      width: 90%;
+    }
+  }
+
+  p{
+    width: 70%;
+    padding-left: 30px;
+    @include mobile(){
+      padding-top: 16px;
+      padding-left: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

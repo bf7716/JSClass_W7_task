@@ -1,0 +1,26 @@
+.flex{
+  display: flex;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.margin-center{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@include mobile{
+  .flex-mob-column{
+    flex-direction: column;
+  }
+
+  .display-mob-none{
+    display: none;
+  }
+}
